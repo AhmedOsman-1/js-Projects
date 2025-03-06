@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    background-color: #22223b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    background-color: #c0c0ca;
+    border-radius: 20px;
+    position: relative;
+    padding-bottom: 60px; /* To prevent button overlap */
+}
+
+.content {
+    padding: 30px;
+    text-align: center;
+}
+
+.question {
+    font-size: 30px;
+}
+
+.answer {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.submit {
+    background-color: rgb(123, 33, 196);
+    color: white;
+    border: none;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.result {
+    display: none;
+    padding: 30px;
+    text-align: center;
+}
+
+.result h1 {
+    font-size: 40px;
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+.play {
+    color: white;
+    background-color: rebeccapurple;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+    .question {
+        font-size: 24px;
+    }
+
+    .answer {
+        font-size: 18px;
+    }
+
+    .submit {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .result h1 {
+        font-size: 32px;
+    }
+
+    .play {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}

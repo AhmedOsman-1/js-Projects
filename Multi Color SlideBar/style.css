@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+.sidebar{
+    width: 180px;
+    min-height: 100vh;
+    background-color: #111827;
+    color:#9ca3af;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+.sidebar-top,
+.sidebar-center,
+.sidebar-bottom{
+    width: 80%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #4b4b4b;
+}
+.sidebar-bottom{
+    border: none;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.list{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+.list-item{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+.list-item-icon{
+    width: 30px;
+    font-size: 19px;
+}
+.list-item:hover,
+.list-item.active{
+    background-color: #374151;
+    color: white;
+}
+
+.logo{
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+.brand{
+    font-weight: bold;
+    cursor: pointer;
+}
+.sidebar-bottom {
+    display: flex;
+    justify-content: center; /* মাঝে আনবে */
+    align-items: center;
+    gap: 10px; /* color box এর মধ্যে gap রাখবে */
+    padding: 10px;
+}
+
+.color-box {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.dark{
+    background-color: #111827;
+}
+.night{
+    background-color: #312e81;
+}
+.light{
+    background-color: #f3f4f6;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50px; /* Sidebar ছোট করে দিলাম */
+    }
+    .brand, .list-item span {
+        display: none; /* টেক্সট হাইড করলাম */
+    }
+    .sidebar-bottom{
+        flex-direction: column;
+    }
+    .list-item {
+        justify-content: center; /* আইকনগুলো ঠিকমতো দেখাবে */
+    }
+}
+
+.sidebar.night{
+    background-color: #312e81;
+    color: #b4bbc7;
+}
+.list-item.active.night{
+    background-color: #4338ca;
+}
+.sidebar.light{
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.list-item.active{
+    background-color: #4338ca;
+    color: #111827;
+}

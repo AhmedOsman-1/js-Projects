@@ -1,0 +1,86 @@
+body {
+    background-color: #927df1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px; /* Reduced for better mobile layout */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Reduced gap for smaller screens */
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add spacing between arrows and slider */
+}
+
+.arrow {
+    height: 100px; /* Reduce arrow size for mobile */
+    cursor: pointer;
+}
+
+.right {
+    transform: rotate(180deg);
+}
+
+.frame {
+    width: 90vw; /* Use a percentage instead of a fixed width */
+    max-width: 800px; /* Prevent it from being too wide */
+    height: 400px; /* Reduce height for mobile */
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content; /* Automatically set width based on images */
+}
+
+.image {
+    width: 90vw; /* Make images responsive */
+    max-width: 800px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom {
+    display: flex;
+    gap: 20px; /* Reduce gap for better spacing on small screens */
+}
+
+.button {
+    width: 12px; /* Make dots smaller */
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+/* ✅ Media query for smaller screens */
+@media (max-width: 600px) {
+    body {
+        margin-top: 50px; /* Adjust margin for smaller screens */
+    }
+
+    .frame {
+        height: 250px; /* Reduce height for better fit */
+    }
+
+    .arrow {
+        height: 60px; /* Smaller arrows for mobile */
+    }
+
+    .bottom {
+        gap: 10px; /* Reduce gap between dots */
+    }
+
+    .button {
+        width: 10px; /* Make dots even smaller */
+        height: 10px;
+    }
+}
