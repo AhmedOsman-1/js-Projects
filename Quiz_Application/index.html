@@ -3,29 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title> Quiz Application</title>
+    <title>Simple Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="game">
-            <div class="content">
-                <h1 class="question"></h1>
-                <div class="answers">
-                   
-                </div>
-            </div>
-            <div class="submit">Submit</div>
+    <div class="app">
+        <h1>Simple Quiz</h1>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-buttons" class="answer-buttons"></div>
+            <button id="next-btn">Next</button>
         </div>
-        <div class="result">
-            <h1>Congratulations</h1>
-            <h3 class="correct"></h3>
-            <h3 class="wrong"></h3>
-            <h2 class="score"> </h2>
-            <button class="play"></button>
-        </div>
-    </div>      
-    <script src="/script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
